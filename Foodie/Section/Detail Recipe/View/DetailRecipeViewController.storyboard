@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Lexend-Light.ttf">
+            <string>Lexend-Light</string>
+        </array>
+        <array key="Lexend-Regular.ttf">
+            <string>Lexend-Regular</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Detail Recipe View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="DetailRecipeViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Y6W-OH-hqX" customClass="DetailRecipeViewController" customModule="Foodie" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="b18-E8-8Ru">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="818"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uTd-VY-Gyh">
+                                        <rect key="frame" x="23" y="-549" width="393" height="1500"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="tmk-kQ-a9J">
+                                                <rect key="frame" x="0.0" y="0.0" width="393" height="300"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="300" id="KDc-Jy-XKl"/>
+                                                </constraints>
+                                            </imageView>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="S7w-Kf-NbP">
+                                                <rect key="frame" x="0.0" y="474" width="245" height="552"/>
+                                                <subviews>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="37y-Hb-YfS">
+                                                        <rect key="frame" x="10" y="10" width="225" height="532"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Banana Bread" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tlx-4D-qcs">
+                                                                <rect key="frame" x="0.0" y="0.0" width="225" height="0.0"/>
+                                                                <fontDescription key="fontDescription" name="Lexend-Regular" family="Lexend" pointSize="20"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ymN-L5-cpu">
+                                                                <rect key="frame" x="0.0" y="10" width="225" height="0.0"/>
+                                                                <subviews>
+                                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="timer" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="5YV-Yv-imZ">
+                                                                        <rect key="frame" x="0.0" y="-0.33333333333333348" width="20" height="1.3333333333333317"/>
+                                                                        <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                        <constraints>
+                                                                            <constraint firstAttribute="width" constant="20" id="vwj-u8-Ny6"/>
+                                                                        </constraints>
+                                                                    </imageView>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="25 mins" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HDM-ss-Jdk">
+                                                                        <rect key="frame" x="20" y="0.0" width="70" height="0.0"/>
+                                                                        <constraints>
+                                                                            <constraint firstAttribute="width" constant="70" id="y0h-kc-Iin"/>
+                                                                        </constraints>
+                                                                        <fontDescription key="fontDescription" name="Lexend-Light" family="Lexend" pointSize="15"/>
+                                                                        <nil key="textColor"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person.2.circle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="dtU-sB-unY">
+                                                                        <rect key="frame" x="90" y="-0.33333333333333348" width="20" height="1.3333333333333317"/>
+                                                                        <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                        <constraints>
+                                                                            <constraint firstAttribute="width" constant="20" id="Cep-h4-tkr"/>
+                                                                        </constraints>
+                                                                    </imageView>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zyr-u8-SSF">
+                                                                        <rect key="frame" x="110" y="0.0" width="20" height="0.0"/>
+                                                                        <constraints>
+                                                                            <constraint firstAttribute="width" constant="20" id="QRQ-iW-4a8"/>
+                                                                        </constraints>
+                                                                        <fontDescription key="fontDescription" name="Lexend-Light" family="Lexend" pointSize="15"/>
+                                                                        <nil key="textColor"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="star.circle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Nna-J8-FOM">
+                                                                        <rect key="frame" x="130" y="-0.33333333333333348" width="20" height="1.3333333333333317"/>
+                                                                        <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                        <constraints>
+                                                                            <constraint firstAttribute="width" constant="20" id="0gn-yB-Q6C"/>
+                                                                        </constraints>
+                                                                    </imageView>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fiv-YF-hw0">
+                                                                        <rect key="frame" x="150" y="0.0" width="75" height="0.0"/>
+                                                                        <fontDescription key="fontDescription" name="Lexend-Light" family="Lexend" pointSize="15"/>
+                                                                        <nil key="textColor"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                </subviews>
+                                                            </stackView>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8T3-dN-iMO">
+                                                                <rect key="frame" x="0.0" y="20" width="225" height="0.0"/>
+                                                                <fontDescription key="fontDescription" name="Lexend-Regular" family="Lexend" pointSize="20"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Xd-me-fch">
+                                                                <rect key="frame" x="0.0" y="30" width="225" height="502"/>
+                                                                <string key="text">Red Lentil Soup with Chicken and Turnips might be a good recipe to expand your main course repertoire. This recipe serves 8 and costs $3.0 per serving. One serving contains &lt;b&gt;477 calories&lt;/b&gt;, &lt;b&gt;27g of protein&lt;/b&gt;, and &lt;b&gt;20g of fat&lt;/b&gt;. It is brought to you by Pink When. 1866 people have tried and liked this recipe. It can be enjoyed any time, but it is especially good for &lt;b&gt;Autumn&lt;/b&gt;. From preparation to the plate, this recipe takes approximately &lt;b&gt;55 minutes&lt;/b&gt;. It is a good option if you're following a &lt;b&gt;gluten free and dairy free&lt;/b&gt; diet. Head to the store and pick up salt and pepper, canned tomatoes, flat leaf parsley, and a few other things to make it today. Overall, this recipe earns a &lt;b&gt;spectacular spoonacular score of 99%&lt;/b&gt;. If you like this recipe, you might also like recipes such as &lt;a href=\"https://spoonacular.com/recipes/red-lentil-and-chicken-soup-682185\"&gt;Red Lentil and Chicken Soup&lt;/a&gt;, &lt;a href=\"https://spoonacular.com/recipes/red-lentil-and-chicken-soup-1058971\"&gt;Red Lentil and Chicken Soup&lt;/a&gt;, and &lt;a href=\"https://spoonacular.com/recipes/red-lentil-soup-34121\"&gt;Red-Lentil Soup&lt;/a&gt;.</string>
+                                                                <fontDescription key="fontDescription" name="Lexend-Light" family="Lexend" pointSize="15"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                    </stackView>
+                                                </subviews>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="trailing" secondItem="37y-Hb-YfS" secondAttribute="trailing" constant="10" id="Qad-VO-Oz4"/>
+                                                    <constraint firstItem="37y-Hb-YfS" firstAttribute="leading" secondItem="S7w-Kf-NbP" secondAttribute="leading" constant="10" id="TW5-cz-0d5"/>
+                                                    <constraint firstItem="37y-Hb-YfS" firstAttribute="top" secondItem="S7w-Kf-NbP" secondAttribute="top" constant="10" id="f3D-S1-NJ2"/>
+                                                    <constraint firstAttribute="bottom" secondItem="37y-Hb-YfS" secondAttribute="bottom" constant="10" id="kAq-1H-qJ2"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstItem="S7w-Kf-NbP" firstAttribute="centerY" secondItem="uTd-VY-Gyh" secondAttribute="centerY" id="B8d-Dh-asC"/>
+                                            <constraint firstItem="tmk-kQ-a9J" firstAttribute="top" secondItem="uTd-VY-Gyh" secondAttribute="top" id="FEX-zK-UHo"/>
+                                            <constraint firstItem="S7w-Kf-NbP" firstAttribute="leading" secondItem="tmk-kQ-a9J" secondAttribute="leading" id="J1O-95-f47"/>
+                                            <constraint firstItem="tmk-kQ-a9J" firstAttribute="leading" secondItem="uTd-VY-Gyh" secondAttribute="leading" id="MvB-uZ-rwo"/>
+                                            <constraint firstAttribute="trailing" secondItem="tmk-kQ-a9J" secondAttribute="trailing" id="YJ1-dt-bye"/>
+                                            <constraint firstAttribute="height" constant="1500" id="amr-c9-G3J"/>
+                                            <constraint firstItem="S7w-Kf-NbP" firstAttribute="top" secondItem="uTd-VY-Gyh" secondAttribute="top" constant="474" id="bzd-3s-66o"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="uTd-VY-Gyh" firstAttribute="height" secondItem="b18-E8-8Ru" secondAttribute="height" multiplier="1.76056" constant="59.859154929577471" id="5Ax-jW-BK0"/>
+                                    <constraint firstAttribute="bottom" secondItem="uTd-VY-Gyh" secondAttribute="bottom" constant="-133" id="hQQ-Wi-XAL"/>
+                                    <constraint firstItem="uTd-VY-Gyh" firstAttribute="leading" secondItem="b18-E8-8Ru" secondAttribute="leading" constant="23" id="kw3-nF-67T"/>
+                                    <constraint firstItem="uTd-VY-Gyh" firstAttribute="top" secondItem="b18-E8-8Ru" secondAttribute="top" constant="-549" id="oeN-w8-ETg"/>
+                                    <constraint firstAttribute="trailing" secondItem="uTd-VY-Gyh" secondAttribute="trailing" id="pbS-G3-9xn"/>
+                                    <constraint firstItem="uTd-VY-Gyh" firstAttribute="width" secondItem="b18-E8-8Ru" secondAttribute="width" id="pes-o3-ioJ"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="b18-E8-8Ru" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="6Ma-Vo-KJC"/>
+                            <constraint firstItem="b18-E8-8Ru" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="gyT-47-yIv"/>
+                            <constraint firstItem="b18-E8-8Ru" firstAttribute="bottom" secondItem="vDu-zF-Fre" secondAttribute="bottom" id="m1m-kl-ucq"/>
+                            <constraint firstItem="b18-E8-8Ru" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" id="ss9-je-NWS"/>
+                        </constraints>
+                    </view>
+                    <size key="freeformSize" width="393" height="852"/>
+                    <connections>
+                        <outlet property="imgCookingTime" destination="5YV-Yv-imZ" id="zzg-Pr-0Hn"/>
+                        <outlet property="imgDetailRecipe" destination="tmk-kQ-a9J" id="rlM-33-Ji1"/>
+                        <outlet property="imgHealthScore" destination="Nna-J8-FOM" id="F4R-B0-BiU"/>
+                        <outlet property="imgServings" destination="dtU-sB-unY" id="S1N-GC-Iww"/>
+                        <outlet property="lblCookingTime" destination="HDM-ss-Jdk" id="2hI-J6-vsf"/>
+                        <outlet property="lblHealthScore" destination="fiv-YF-hw0" id="dFk-IB-yRo"/>
+                        <outlet property="lblServings" destination="zyr-u8-SSF" id="HJS-op-yfg"/>
+                        <outlet property="lblSummary" destination="3Xd-me-fch" id="X2h-cl-gqN"/>
+                        <outlet property="lblTitleDetailRecipe" destination="Tlx-4D-qcs" id="Zgg-UG-DWo"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-37.404580152671755" y="3.5211267605633805"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="person.2.circle" catalog="system" width="128" height="123"/>
+        <image name="star.circle" catalog="system" width="128" height="123"/>
+        <image name="timer" catalog="system" width="128" height="123"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
