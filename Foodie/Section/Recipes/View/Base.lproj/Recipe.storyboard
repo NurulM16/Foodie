@@ -21,7 +21,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="HbU-ei-sqa">
                                 <rect key="frame" x="10" y="79" width="373" height="729"/>
                                 <subviews>
-                                    <searchBar contentMode="redraw" searchBarStyle="minimal" text="" placeholder="Search recipes" translatesAutoresizingMaskIntoConstraints="NO" id="gng-7v-U2G">
+                                    <searchBar contentMode="redraw" text="" placeholder="Search recipes" translatesAutoresizingMaskIntoConstraints="NO" id="gng-7v-U2G">
                                         <rect key="frame" x="0.0" y="0.0" width="373" height="149"/>
                                         <textInputTraits key="textInputTraits"/>
                                         <connections>

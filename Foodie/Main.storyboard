@@ -26,11 +26,12 @@
             </objects>
             <point key="canvasLocation" x="-1509" y="-101"/>
         </scene>
-        <!--Item-->
+        <!--Home-->
         <scene sceneID="UTq-7Z-sgR">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mVN-AJ-w8W" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <navigationController id="0ar-ry-Weg" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="B8z-dH-o55"/>
+                    <tabBarItem key="tabBarItem" title="Home" image="house.circle" catalog="system" id="B8z-dH-o55"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Zyx-Vk-L7t">
                         <rect key="frame" x="0.0" y="59" width="393" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -39,7 +40,6 @@
                         <segue destination="Yzz-uM-WZ5" kind="relationship" relationship="rootViewController" id="qwj-GA-KhS"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="mVN-AJ-w8W" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-2358" y="632"/>
         </scene>
@@ -108,4 +108,7 @@
             <point key="canvasLocation" x="-674" y="633"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="house.circle" catalog="system" width="128" height="123"/>
+    </resources>
 </document>

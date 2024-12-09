@@ -22,14 +22,20 @@
                 <rect key="frame" x="0.0" y="0.0" width="136" height="180"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="takeoutbag.and.cup.and.straw.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="7aQ-K3-6Nb">
-                        <rect key="frame" x="0.0" y="0.0" width="136" height="103"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="takeoutbag.and.cup.and.straw.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="7aQ-K3-6Nb">
+                        <rect key="frame" x="0.0" y="-0.6666666666666714" width="136" height="136.33333333333331"/>
                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                <integer key="value" value="20"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
                     </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Pasta with Garlic, Scallions, Cauliflower &amp; Breadcrumbs" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BYL-Y6-zuI">
-                        <rect key="frame" x="8" y="114" width="121" height="46"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pasta with Garlic, Scallions, Cauliflower &amp; Breadcrumbs" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BYL-Y6-zuI">
+                        <rect key="frame" x="8" y="142" width="120" height="30"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="30" id="Vlf-Pe-hL1"/>
+                        </constraints>
                         <fontDescription key="fontDescription" name="Lexend-Regular" family="Lexend" pointSize="12"/>
                         <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
                         <nil key="highlightedColor"/>
@@ -37,6 +43,15 @@
                 </subviews>
             </view>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="BYL-Y6-zuI" secondAttribute="trailing" constant="8" id="13t-Dq-Q4W"/>
+                <constraint firstItem="BYL-Y6-zuI" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="8" id="7wa-2b-sbv"/>
+                <constraint firstItem="7aQ-K3-6Nb" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="AS0-YA-AE8"/>
+                <constraint firstAttribute="bottom" secondItem="BYL-Y6-zuI" secondAttribute="bottom" constant="8" id="JFW-Pg-a7K"/>
+                <constraint firstItem="BYL-Y6-zuI" firstAttribute="top" secondItem="7aQ-K3-6Nb" secondAttribute="bottom" constant="8" id="WPo-0C-IMr"/>
+                <constraint firstItem="7aQ-K3-6Nb" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="eqE-J4-NB3"/>
+                <constraint firstAttribute="trailing" secondItem="7aQ-K3-6Nb" secondAttribute="trailing" id="s8Y-1v-Pwc"/>
+            </constraints>
             <size key="customSize" width="136" height="180"/>
             <connections>
                 <outlet property="imgRecipe" destination="7aQ-K3-6Nb" id="77g-90-nmQ"/>

@@ -20,152 +20,154 @@
         <!--Detail Recipe View Controller-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
-                <viewController storyboardIdentifier="DetailRecipeViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Y6W-OH-hqX" customClass="DetailRecipeViewController" customModule="Foodie" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                <viewController storyboardIdentifier="DetailRecipeViewController" id="Y6W-OH-hqX" customClass="DetailRecipeViewController" customModule="Foodie" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc" userLabel="Parent View">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="b18-E8-8Ru">
-                                <rect key="frame" x="0.0" y="0.0" width="393" height="818"/>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SJa-Z6-A1d">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uTd-VY-Gyh">
-                                        <rect key="frame" x="23" y="-549" width="393" height="1500"/>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CDF-s4-QtZ" userLabel="Child Scroll View">
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="1500"/>
                                         <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="tmk-kQ-a9J">
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="6tb-Uh-0hc">
                                                 <rect key="frame" x="0.0" y="0.0" width="393" height="300"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="300" id="KDc-Jy-XKl"/>
+                                                    <constraint firstAttribute="height" constant="300" id="BKk-TA-0Bu"/>
                                                 </constraints>
                                             </imageView>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="S7w-Kf-NbP">
-                                                <rect key="frame" x="0.0" y="474" width="245" height="552"/>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gma-BD-3RT" userLabel="Container View">
+                                                <rect key="frame" x="0.0" y="250" width="413" height="1250"/>
                                                 <subviews>
-                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="37y-Hb-YfS">
-                                                        <rect key="frame" x="10" y="10" width="225" height="532"/>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="33u-9h-ip3">
+                                                        <rect key="frame" x="12" y="60" width="365" height="625.33333333333337"/>
                                                         <subviews>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Banana Bread" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tlx-4D-qcs">
-                                                                <rect key="frame" x="0.0" y="0.0" width="225" height="0.0"/>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Red Lentil Soup with Chicken and Turnips" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EHt-c6-jFP">
+                                                                <rect key="frame" x="0.0" y="0.0" width="365" height="50"/>
                                                                 <fontDescription key="fontDescription" name="Lexend-Regular" family="Lexend" pointSize="20"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
-                                                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ymN-L5-cpu">
-                                                                <rect key="frame" x="0.0" y="10" width="225" height="0.0"/>
+                                                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nDM-A1-9JF">
+                                                                <rect key="frame" x="0.0" y="60.000000000000007" width="365" height="20.333333333333336"/>
                                                                 <subviews>
-                                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="timer" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="5YV-Yv-imZ">
-                                                                        <rect key="frame" x="0.0" y="-0.33333333333333348" width="20" height="1.3333333333333317"/>
-                                                                        <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                        <constraints>
-                                                                            <constraint firstAttribute="width" constant="20" id="vwj-u8-Ny6"/>
-                                                                        </constraints>
-                                                                    </imageView>
-                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="25 mins" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HDM-ss-Jdk">
-                                                                        <rect key="frame" x="20" y="0.0" width="70" height="0.0"/>
-                                                                        <constraints>
-                                                                            <constraint firstAttribute="width" constant="70" id="y0h-kc-Iin"/>
-                                                                        </constraints>
-                                                                        <fontDescription key="fontDescription" name="Lexend-Light" family="Lexend" pointSize="15"/>
-                                                                        <nil key="textColor"/>
-                                                                        <nil key="highlightedColor"/>
-                                                                    </label>
-                                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person.2.circle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="dtU-sB-unY">
-                                                                        <rect key="frame" x="90" y="-0.33333333333333348" width="20" height="1.3333333333333317"/>
-                                                                        <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                        <constraints>
-                                                                            <constraint firstAttribute="width" constant="20" id="Cep-h4-tkr"/>
-                                                                        </constraints>
-                                                                    </imageView>
-                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zyr-u8-SSF">
-                                                                        <rect key="frame" x="110" y="0.0" width="20" height="0.0"/>
-                                                                        <constraints>
-                                                                            <constraint firstAttribute="width" constant="20" id="QRQ-iW-4a8"/>
-                                                                        </constraints>
-                                                                        <fontDescription key="fontDescription" name="Lexend-Light" family="Lexend" pointSize="15"/>
-                                                                        <nil key="textColor"/>
-                                                                        <nil key="highlightedColor"/>
-                                                                    </label>
-                                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="star.circle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Nna-J8-FOM">
-                                                                        <rect key="frame" x="130" y="-0.33333333333333348" width="20" height="1.3333333333333317"/>
+                                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="timer" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="vjp-Lw-59h">
+                                                                        <rect key="frame" x="0.0" y="0.99999999999999822" width="20" height="19"/>
                                                                         <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                         <constraints>
-                                                                            <constraint firstAttribute="width" constant="20" id="0gn-yB-Q6C"/>
+                                                                            <constraint firstAttribute="width" constant="20" id="aqI-x5-yTz"/>
                                                                         </constraints>
                                                                     </imageView>
-                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fiv-YF-hw0">
-                                                                        <rect key="frame" x="150" y="0.0" width="75" height="0.0"/>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="25 mins" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hkh-qI-D8Y">
+                                                                        <rect key="frame" x="20" y="0.0" width="70" height="20.333333333333332"/>
+                                                                        <constraints>
+                                                                            <constraint firstAttribute="width" constant="70" id="cJb-4C-6Z2"/>
+                                                                        </constraints>
+                                                                        <fontDescription key="fontDescription" name="Lexend-Light" family="Lexend" pointSize="15"/>
+                                                                        <nil key="textColor"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person.2.circle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="3P2-U2-klt">
+                                                                        <rect key="frame" x="90" y="0.99999999999999822" width="20" height="19"/>
+                                                                        <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                        <constraints>
+                                                                            <constraint firstAttribute="width" constant="20" id="yfR-mH-vxy"/>
+                                                                        </constraints>
+                                                                    </imageView>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ux9-54-zkh">
+                                                                        <rect key="frame" x="110" y="0.0" width="20" height="20.333333333333332"/>
+                                                                        <constraints>
+                                                                            <constraint firstAttribute="width" constant="20" id="8J9-is-2lM"/>
+                                                                        </constraints>
+                                                                        <fontDescription key="fontDescription" name="Lexend-Light" family="Lexend" pointSize="15"/>
+                                                                        <nil key="textColor"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="star.circle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="aWS-Bs-KWt">
+                                                                        <rect key="frame" x="130" y="0.99999999999999822" width="20" height="19"/>
+                                                                        <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                        <constraints>
+                                                                            <constraint firstAttribute="width" constant="20" id="IbD-Ke-jik"/>
+                                                                        </constraints>
+                                                                    </imageView>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rNi-0R-c4K">
+                                                                        <rect key="frame" x="150" y="0.0" width="215" height="20.333333333333332"/>
                                                                         <fontDescription key="fontDescription" name="Lexend-Light" family="Lexend" pointSize="15"/>
                                                                         <nil key="textColor"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                 </subviews>
                                                             </stackView>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8T3-dN-iMO">
-                                                                <rect key="frame" x="0.0" y="20" width="225" height="0.0"/>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5te-KX-ray">
+                                                                <rect key="frame" x="0.0" y="90.333333333333314" width="365" height="25"/>
                                                                 <fontDescription key="fontDescription" name="Lexend-Regular" family="Lexend" pointSize="20"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Xd-me-fch">
-                                                                <rect key="frame" x="0.0" y="30" width="225" height="502"/>
-                                                                <string key="text">Red Lentil Soup with Chicken and Turnips might be a good recipe to expand your main course repertoire. This recipe serves 8 and costs $3.0 per serving. One serving contains &lt;b&gt;477 calories&lt;/b&gt;, &lt;b&gt;27g of protein&lt;/b&gt;, and &lt;b&gt;20g of fat&lt;/b&gt;. It is brought to you by Pink When. 1866 people have tried and liked this recipe. It can be enjoyed any time, but it is especially good for &lt;b&gt;Autumn&lt;/b&gt;. From preparation to the plate, this recipe takes approximately &lt;b&gt;55 minutes&lt;/b&gt;. It is a good option if you're following a &lt;b&gt;gluten free and dairy free&lt;/b&gt; diet. Head to the store and pick up salt and pepper, canned tomatoes, flat leaf parsley, and a few other things to make it today. Overall, this recipe earns a &lt;b&gt;spectacular spoonacular score of 99%&lt;/b&gt;. If you like this recipe, you might also like recipes such as &lt;a href=\"https://spoonacular.com/recipes/red-lentil-and-chicken-soup-682185\"&gt;Red Lentil and Chicken Soup&lt;/a&gt;, &lt;a href=\"https://spoonacular.com/recipes/red-lentil-and-chicken-soup-1058971\"&gt;Red Lentil and Chicken Soup&lt;/a&gt;, and &lt;a href=\"https://spoonacular.com/recipes/red-lentil-soup-34121\"&gt;Red-Lentil Soup&lt;/a&gt;.</string>
-                                                                <fontDescription key="fontDescription" name="Lexend-Light" family="Lexend" pointSize="15"/>
-                                                                <nil key="textColor"/>
-                                                                <nil key="highlightedColor"/>
-                                                            </label>
+                                                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PNu-kO-oa2">
+                                                                <rect key="frame" x="0.0" y="125.33333333333331" width="365" height="499.99999999999994"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="500" id="axf-Ni-zxx"/>
+                                                                </constraints>
+                                                                <wkWebViewConfiguration key="configuration">
+                                                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                                                    <wkPreferences key="preferences"/>
+                                                                </wkWebViewConfiguration>
+                                                            </wkWebView>
                                                         </subviews>
+                                                        <constraints>
+                                                            <constraint firstItem="PNu-kO-oa2" firstAttribute="top" secondItem="5te-KX-ray" secondAttribute="bottom" constant="10" id="HBb-7H-yDe"/>
+                                                        </constraints>
                                                     </stackView>
                                                 </subviews>
-                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="trailing" secondItem="37y-Hb-YfS" secondAttribute="trailing" constant="10" id="Qad-VO-Oz4"/>
-                                                    <constraint firstItem="37y-Hb-YfS" firstAttribute="leading" secondItem="S7w-Kf-NbP" secondAttribute="leading" constant="10" id="TW5-cz-0d5"/>
-                                                    <constraint firstItem="37y-Hb-YfS" firstAttribute="top" secondItem="S7w-Kf-NbP" secondAttribute="top" constant="10" id="f3D-S1-NJ2"/>
-                                                    <constraint firstAttribute="bottom" secondItem="37y-Hb-YfS" secondAttribute="bottom" constant="10" id="kAq-1H-qJ2"/>
+                                                    <constraint firstAttribute="trailing" secondItem="33u-9h-ip3" secondAttribute="trailing" constant="36" id="2GZ-HO-3UY"/>
+                                                    <constraint firstItem="33u-9h-ip3" firstAttribute="leading" secondItem="gma-BD-3RT" secondAttribute="leading" constant="12" id="eFA-83-rZi"/>
+                                                    <constraint firstItem="33u-9h-ip3" firstAttribute="top" secondItem="gma-BD-3RT" secondAttribute="top" constant="60" id="prD-8T-oes"/>
                                                 </constraints>
                                             </view>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
-                                            <constraint firstItem="S7w-Kf-NbP" firstAttribute="centerY" secondItem="uTd-VY-Gyh" secondAttribute="centerY" id="B8d-Dh-asC"/>
-                                            <constraint firstItem="tmk-kQ-a9J" firstAttribute="top" secondItem="uTd-VY-Gyh" secondAttribute="top" id="FEX-zK-UHo"/>
-                                            <constraint firstItem="S7w-Kf-NbP" firstAttribute="leading" secondItem="tmk-kQ-a9J" secondAttribute="leading" id="J1O-95-f47"/>
-                                            <constraint firstItem="tmk-kQ-a9J" firstAttribute="leading" secondItem="uTd-VY-Gyh" secondAttribute="leading" id="MvB-uZ-rwo"/>
-                                            <constraint firstAttribute="trailing" secondItem="tmk-kQ-a9J" secondAttribute="trailing" id="YJ1-dt-bye"/>
-                                            <constraint firstAttribute="height" constant="1500" id="amr-c9-G3J"/>
-                                            <constraint firstItem="S7w-Kf-NbP" firstAttribute="top" secondItem="uTd-VY-Gyh" secondAttribute="top" constant="474" id="bzd-3s-66o"/>
+                                            <constraint firstItem="6tb-Uh-0hc" firstAttribute="leading" secondItem="CDF-s4-QtZ" secondAttribute="leading" id="3h4-cY-Djj"/>
+                                            <constraint firstItem="6tb-Uh-0hc" firstAttribute="top" secondItem="CDF-s4-QtZ" secondAttribute="top" id="HqL-kZ-mrI"/>
+                                            <constraint firstItem="gma-BD-3RT" firstAttribute="leading" secondItem="CDF-s4-QtZ" secondAttribute="leading" id="Rh0-fH-iqS"/>
+                                            <constraint firstAttribute="bottom" secondItem="gma-BD-3RT" secondAttribute="bottom" id="Rs3-5m-o7X"/>
+                                            <constraint firstAttribute="trailing" secondItem="gma-BD-3RT" secondAttribute="trailing" constant="-20" id="XdP-4s-Qa0"/>
+                                            <constraint firstAttribute="trailing" secondItem="6tb-Uh-0hc" secondAttribute="trailing" id="kaZ-HQ-Kjh"/>
+                                            <constraint firstItem="gma-BD-3RT" firstAttribute="top" secondItem="6tb-Uh-0hc" secondAttribute="bottom" constant="-50" id="uOj-uP-TfN"/>
                                         </constraints>
                                     </view>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="uTd-VY-Gyh" firstAttribute="height" secondItem="b18-E8-8Ru" secondAttribute="height" multiplier="1.76056" constant="59.859154929577471" id="5Ax-jW-BK0"/>
-                                    <constraint firstAttribute="bottom" secondItem="uTd-VY-Gyh" secondAttribute="bottom" constant="-133" id="hQQ-Wi-XAL"/>
-                                    <constraint firstItem="uTd-VY-Gyh" firstAttribute="leading" secondItem="b18-E8-8Ru" secondAttribute="leading" constant="23" id="kw3-nF-67T"/>
-                                    <constraint firstItem="uTd-VY-Gyh" firstAttribute="top" secondItem="b18-E8-8Ru" secondAttribute="top" constant="-549" id="oeN-w8-ETg"/>
-                                    <constraint firstAttribute="trailing" secondItem="uTd-VY-Gyh" secondAttribute="trailing" id="pbS-G3-9xn"/>
-                                    <constraint firstItem="uTd-VY-Gyh" firstAttribute="width" secondItem="b18-E8-8Ru" secondAttribute="width" id="pes-o3-ioJ"/>
+                                    <constraint firstItem="CDF-s4-QtZ" firstAttribute="leading" secondItem="SJa-Z6-A1d" secondAttribute="leading" id="7gq-kF-1Ru"/>
+                                    <constraint firstItem="CDF-s4-QtZ" firstAttribute="top" secondItem="SJa-Z6-A1d" secondAttribute="top" id="j8z-3L-2BW"/>
+                                    <constraint firstAttribute="bottom" secondItem="CDF-s4-QtZ" secondAttribute="bottom" id="myD-rW-EU0"/>
+                                    <constraint firstAttribute="trailing" secondItem="CDF-s4-QtZ" secondAttribute="trailing" id="w2t-e2-75x"/>
                                 </constraints>
                             </scrollView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="b18-E8-8Ru" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="6Ma-Vo-KJC"/>
-                            <constraint firstItem="b18-E8-8Ru" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="gyT-47-yIv"/>
-                            <constraint firstItem="b18-E8-8Ru" firstAttribute="bottom" secondItem="vDu-zF-Fre" secondAttribute="bottom" id="m1m-kl-ucq"/>
-                            <constraint firstItem="b18-E8-8Ru" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" id="ss9-je-NWS"/>
+                            <constraint firstAttribute="bottom" secondItem="SJa-Z6-A1d" secondAttribute="bottom" id="Aug-Rk-J13"/>
+                            <constraint firstItem="SJa-Z6-A1d" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" id="CVo-XB-zTt"/>
+                            <constraint firstItem="CDF-s4-QtZ" firstAttribute="width" secondItem="5EZ-qb-Rvc" secondAttribute="width" id="GNb-5O-5FX"/>
+                            <constraint firstItem="CDF-s4-QtZ" firstAttribute="height" secondItem="5EZ-qb-Rvc" secondAttribute="height" multiplier="1.76056" id="dTK-qm-gFk"/>
+                            <constraint firstItem="SJa-Z6-A1d" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="lPt-MA-WVW"/>
+                            <constraint firstItem="SJa-Z6-A1d" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="ypQ-Be-zik"/>
                         </constraints>
                     </view>
-                    <size key="freeformSize" width="393" height="852"/>
                     <connections>
-                        <outlet property="imgCookingTime" destination="5YV-Yv-imZ" id="zzg-Pr-0Hn"/>
-                        <outlet property="imgDetailRecipe" destination="tmk-kQ-a9J" id="rlM-33-Ji1"/>
-                        <outlet property="imgHealthScore" destination="Nna-J8-FOM" id="F4R-B0-BiU"/>
-                        <outlet property="imgServings" destination="dtU-sB-unY" id="S1N-GC-Iww"/>
-                        <outlet property="lblCookingTime" destination="HDM-ss-Jdk" id="2hI-J6-vsf"/>
-                        <outlet property="lblHealthScore" destination="fiv-YF-hw0" id="dFk-IB-yRo"/>
-                        <outlet property="lblServings" destination="zyr-u8-SSF" id="HJS-op-yfg"/>
-                        <outlet property="lblSummary" destination="3Xd-me-fch" id="X2h-cl-gqN"/>
-                        <outlet property="lblTitleDetailRecipe" destination="Tlx-4D-qcs" id="Zgg-UG-DWo"/>
+                        <outlet property="imgDetailRecipe" destination="6tb-Uh-0hc" id="g6N-hu-Wd4"/>
+                        <outlet property="lblCookingTime" destination="hkh-qI-D8Y" id="mEM-GG-vRy"/>
+                        <outlet property="lblHealthScore" destination="rNi-0R-c4K" id="N8H-Tu-syW"/>
+                        <outlet property="lblServings" destination="ux9-54-zkh" id="D5B-sH-0Du"/>
+                        <outlet property="lblTitleDetailRecipe" destination="EHt-c6-jFP" id="vhU-YU-sYL"/>
+                        <outlet property="viewContainer" destination="gma-BD-3RT" id="eoH-R4-hIJ"/>
+                        <outlet property="webViewSummary" destination="PNu-kO-oa2" id="hEk-rL-ysd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

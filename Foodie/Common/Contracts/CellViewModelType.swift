@@ -6,3 +6,8 @@
 //
 
 import Foundation
+
+protocol CellViewModelType {
+    associatedtype T
+    func configureCell(model: T)
+}

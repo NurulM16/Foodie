@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 class SearchRecipesCollectionViewCell: UICollectionViewCell {
     
@@ -17,4 +18,15 @@ class SearchRecipesCollectionViewCell: UICollectionViewCell {
         // Initialization code
     }
 
+}
+
+extension SearchRecipesCollectionViewCell: CellViewModelType {
+    func configureCell(model: SearchRecipesModel) {
+        lblTitleRecipe.text = model.title
+        if let imageUrlString = model.image {
+            let imageUrl = URL(string: imageUrlString)
+            imgRecipe.kf.setImage(with: imageUrl)
+        }
+    }
+    
 }
