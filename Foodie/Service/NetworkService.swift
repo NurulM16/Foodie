@@ -9,8 +9,12 @@ import Moya
 
 enum NetworkService {
     case searchAllFood
-    case searchRecipes(query: String)
+    case searchRecipes(query: String, number: Int)
     case getRecipeInformation(id: Int)
+    case searchGroceryProducts(query: String, number: Int)
+    case getProductInformation(id: Int)
+    case searchMenuItems(query: String, number: Int)
+    case getMenuItemInformation(id: Int)
 }
 
 extension NetworkService: TargetType {
@@ -26,6 +30,14 @@ extension NetworkService: TargetType {
             return "recipes/complexSearch"
         case .getRecipeInformation(id: let id):
             return "recipes/\(id)/information"
+        case .searchGroceryProducts:
+            return "food/products/search"
+        case .getProductInformation(id: let id):
+            return "food/products/\(id)"
+        case .searchMenuItems:
+            return "food/menuItems/search"
+        case .getMenuItemInformation(id: let id):
+            return "food/menuItems/\(id)"
         }
     }
     
@@ -35,9 +47,9 @@ extension NetworkService: TargetType {
     
     var task: Task {
         switch self {
-        case .searchRecipes(query: let query):
-            return .requestParameters(parameters: ["query": query], encoding: URLEncoding.default)
-        case .searchAllFood, .getRecipeInformation:
+        case .searchRecipes(query: let query, number: let number), .searchGroceryProducts(query: let query, number: let number), .searchMenuItems(query: let query, number: let number):
+            return .requestParameters(parameters: ["query": query, "number": number], encoding: URLEncoding.default)
+        case .searchAllFood, .getRecipeInformation, .getProductInformation, .getMenuItemInformation:
             return .requestPlain
         }
     }
