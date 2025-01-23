@@ -9,6 +9,7 @@ import Foundation
 import RxSwift
 
 class DetailRecipeInteractor: DetailRecipePresenterToInteractorProtocol {
+    
     var presenter: DetailRecipeInteractorToPresenterProtocol?
     private let service: NetworkManager
     let disposeBag = DisposeBag()
@@ -36,5 +37,20 @@ class DetailRecipeInteractor: DetailRecipePresenterToInteractorProtocol {
             .disposed(by: disposeBag)
     }
     
+    func toggleFavoriteStatus(for recipe: SearchRecipesModel) {
+        let isFavorite = FavoritesDataManager.shared.isFavorite(recipe)
+        if isFavorite {
+            FavoritesDataManager.shared.removeRecipe(recipe)
+            presenter?.didUpdateFavoriteStatus(isFavorite: false)
+        } else {
+            FavoritesDataManager.shared.saveRecipe(recipe)
+            presenter?.didUpdateFavoriteStatus(isFavorite: true)
+        }
+    }
+    
+    func checkIfFavorite(_ recipe: SearchRecipesModel) {
+        let isFavorite = FavoritesDataManager.shared.isFavorite(recipe)
+        presenter?.didUpdateFavoriteStatus(isFavorite: isFavorite)
+    }
     
 }

@@ -15,7 +15,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
 //        let initialViewController = SearchRecipesRouter.createModule()
-        let initialViewController = MainMenuController()
+        let initialViewController = MainMenuRouter.createModule()
         let navigationController = UINavigationController(rootViewController: initialViewController)
         
         window = UIWindow(frame: UIScreen.main.bounds)

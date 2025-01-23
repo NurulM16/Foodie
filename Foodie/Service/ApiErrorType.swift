@@ -38,7 +38,11 @@ enum APIErrorType: Int, Error {
     /// Internet connection error occured
     case internetConnection = -2
     
-    static let allValues = [badRequest, unauthorized, forbidden, notFound, notAcceptable, internalServerError, serviceUnavailable, mapping, unknown, internetConnection]
+    case invalidURL = -3
+    
+    case dataProcessing = -4
+    
+    static let allValues = [badRequest, unauthorized, forbidden, notFound, notAcceptable, internalServerError, serviceUnavailable, mapping, unknown, internetConnection, invalidURL, .dataProcessing]
 }
 
 final class APIError: Error {

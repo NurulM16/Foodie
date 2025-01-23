@@ -16,7 +16,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         //initial VIPER Module
 //        let initialViewController = SearchRecipesRouter.createModule()
-        let initialViewController = MainMenuController()
+        let initialViewController = MainMenuRouter.createModule()
         
         let navigationController = UINavigationController(rootViewController: initialViewController)
         let window = UIWindow(windowScene: windowScene)

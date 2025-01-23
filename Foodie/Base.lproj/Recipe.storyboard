@@ -9,6 +9,11 @@
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Lexend-Medium.ttf">
+            <string>Lexend-Medium</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Search Recipes View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -19,17 +24,38 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="HbU-ei-sqa">
-                                <rect key="frame" x="10" y="79" width="373" height="729"/>
+                                <rect key="frame" x="10" y="59" width="373" height="749"/>
                                 <subviews>
-                                    <searchBar contentMode="redraw" text="" placeholder="Search recipes" translatesAutoresizingMaskIntoConstraints="NO" id="gng-7v-U2G">
-                                        <rect key="frame" x="0.0" y="0.0" width="373" height="149"/>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qls-K8-Is5">
+                                        <rect key="frame" x="0.0" y="0.0" width="373" height="50"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Discover Delicious Recipes at Your Fingertips✨" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AIL-xK-7jE">
+                                                <rect key="frame" x="20" y="0.0" width="333" height="50"/>
+                                                <fontDescription key="fontDescription" name="Lexend-Medium" family="Lexend" pointSize="20"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstItem="AIL-xK-7jE" firstAttribute="leading" secondItem="qls-K8-Is5" secondAttribute="leading" constant="20" id="BFk-ut-Mlv"/>
+                                            <constraint firstAttribute="height" constant="50" id="NUf-hO-ZYu"/>
+                                            <constraint firstItem="AIL-xK-7jE" firstAttribute="top" secondItem="qls-K8-Is5" secondAttribute="top" id="oYj-Ih-NEc"/>
+                                            <constraint firstAttribute="trailing" secondItem="AIL-xK-7jE" secondAttribute="trailing" constant="20" id="rjE-4H-tpb"/>
+                                        </constraints>
+                                    </view>
+                                    <searchBar contentMode="redraw" searchBarStyle="minimal" text="" placeholder="Search recipes" translatesAutoresizingMaskIntoConstraints="NO" id="gng-7v-U2G">
+                                        <rect key="frame" x="0.0" y="50" width="373" height="70"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="70" id="WsO-lc-jZp"/>
+                                        </constraints>
                                         <textInputTraits key="textInputTraits"/>
                                         <connections>
                                             <outlet property="delegate" destination="BYZ-38-t0r" id="hNe-LS-YwM"/>
                                         </connections>
                                     </searchBar>
                                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="aBz-3w-b9e">
-                                        <rect key="frame" x="0.0" y="149" width="373" height="580"/>
+                                        <rect key="frame" x="0.0" y="120" width="373" height="629"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="tf9-It-8pP">
                                             <size key="itemSize" width="140" height="140"/>
@@ -49,6 +75,10 @@
                                         </cells>
                                     </collectionView>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstItem="qls-K8-Is5" firstAttribute="top" secondItem="HbU-ei-sqa" secondAttribute="top" id="Q29-iA-gz9"/>
+                                    <constraint firstItem="gng-7v-U2G" firstAttribute="top" secondItem="qls-K8-Is5" secondAttribute="bottom" id="dZ1-o0-exN"/>
+                                </constraints>
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -57,7 +87,7 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="HbU-ei-sqa" secondAttribute="bottom" constant="10" id="KdA-WA-54I"/>
                             <constraint firstItem="HbU-ei-sqa" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="SHu-ur-u5g"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="HbU-ei-sqa" secondAttribute="trailing" constant="10" id="bX5-jM-jgC"/>
-                            <constraint firstItem="HbU-ei-sqa" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="wnf-2P-zq7"/>
+                            <constraint firstItem="HbU-ei-sqa" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="wnf-2P-zq7"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Bat-kW-tt7"/>

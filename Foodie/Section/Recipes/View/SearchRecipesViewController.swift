@@ -19,7 +19,6 @@ class SearchRecipesViewController: UIViewController {
 
     
     override func viewDidLoad() {
-        print("masuk recipe")
         setupCollectionView()
         setupSearchBar()
         fetchPresenter(query: "")
@@ -30,7 +29,6 @@ class SearchRecipesViewController: UIViewController {
     }
     
     private func fetchPresenter(query: String) {
-        print("masuk fetch presenter")
         presenter?.searchRecipes(query: query)
     }
     
@@ -86,7 +84,6 @@ extension SearchRecipesViewController: SearchRecipesPresenterToViewProtocol {
 
 extension SearchRecipesViewController: UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        print("masuk collection view")
         print("data list count \(self.dataList.count)")
         return self.dataList.count
     }
@@ -122,21 +119,3 @@ extension SearchRecipesViewController: UISearchBarDelegate {
         self.dismiss(animated: true)
     }
 }
-
-
-
-
-
-
-
-
-
-
-//    var dataList = [
-//        SearchRecipesModel(id: 1, title: "Pasta with Garlic, Scallions, Cauliflower & Breadcrumbs", image: "https://www.recipetineats.com/tachyon/2023/10/Chicken-Francese_4.jpg?resize=450%2C", imageType: "jpg"),
-//        SearchRecipesModel(id: 2, title: "Pasta with Garlic, Scallions, Cauliflower & Breadcrumbs", image: "https://static.ffx.io/images/$zoom_0.09883644920904695%2C$multiply_0.9921%2C$ratio_1.5%2C$width_756%2C$x_0%2C$y_36/t_crop_custom/q_86%2Cf_auto/847ee0dc897a34d94b9586ca46ca249f962ca510", imageType: "jpg"),
-//        SearchRecipesModel(id: 1, title: "Pasta with Garlic, Scallions, Cauliflower & Breadcrumbs", image: "https://www.recipetineats.com/tachyon/2023/10/Chicken-Francese_4.jpg?resize=450%2C", imageType: "jpg"),
-//        SearchRecipesModel(id: 2, title: "Pasta with Garlic, Scallions, Cauliflower & Breadcrumbs", image: "https://static.ffx.io/images/$zoom_0.09883644920904695%2C$multiply_0.9921%2C$ratio_1.5%2C$width_756%2C$x_0%2C$y_36/t_crop_custom/q_86%2Cf_auto/847ee0dc897a34d94b9586ca46ca249f962ca510", imageType: "jpg"),
-//        SearchRecipesModel(id: 1, title: "Pasta with Garlic, Scallions, Cauliflower & Breadcrumbs", image: "https://www.recipetineats.com/tachyon/2023/10/Chicken-Francese_4.jpg?resize=450%2C", imageType: "jpg"),
-//        SearchRecipesModel(id: 2, title: "Pasta with Garlic, Scallions, Cauliflower & Breadcrumbs", image: "https://static.ffx.io/images/$zoom_0.09883644920904695%2C$multiply_0.9921%2C$ratio_1.5%2C$width_756%2C$x_0%2C$y_36/t_crop_custom/q_86%2Cf_auto/847ee0dc897a34d94b9586ca46ca249f962ca510", imageType: "jpg")
-//    ]

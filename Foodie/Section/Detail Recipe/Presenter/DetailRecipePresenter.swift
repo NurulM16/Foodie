@@ -5,9 +5,10 @@
 //  Created by Nurul Mustika on 03/12/24.
 //
 
-import Foundation
+import UIKit
 
 class DetailRecipePresenter: DetailRecipeViewToPresenterProtocol {
+    
     var view: DetailRecipePresenterToViewProtocol?
     
     var interactor: DetailRecipePresenterToInteractorProtocol?
@@ -18,9 +19,23 @@ class DetailRecipePresenter: DetailRecipeViewToPresenterProtocol {
         interactor?.getRecipeInformation(id: id)
     }
     
+    func viewDidLoad(recipe: SearchRecipesModel?) {
+        guard let recipe = recipe else { return }
+        interactor?.checkIfFavorite(recipe)
+    }
+    
+    func didTapFavoriteButton(recipe: SearchRecipesModel?) {
+        guard let recipe = recipe else { return }
+        interactor?.toggleFavoriteStatus(for: recipe)
+    }
+    
 }
 
 extension DetailRecipePresenter: DetailRecipeInteractorToPresenterProtocol {
+    func didUpdateFavoriteStatus(isFavorite: Bool) {
+        view?.updateFavoriteIcon(isFavorite: isFavorite)
+    }
+    
     func onSuccess(data: GetRecipeInformationResponse?) {
         view?.onSuccess(data: data)
     }
@@ -32,6 +47,5 @@ extension DetailRecipePresenter: DetailRecipeInteractorToPresenterProtocol {
     func isLoading(isLoading: Bool) {
         view?.isLoading(isLoading: isLoading)
     }
-    
     
 }

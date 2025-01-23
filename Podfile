@@ -12,6 +12,7 @@ target 'Foodie' do
   pod 'SnapKit'
   pod 'Kingfisher'
   pod 'IQKeyboardManagerSwift'
+  pod 'LZViewPager'
 
   target 'FoodieTests' do
     inherit! :search_paths

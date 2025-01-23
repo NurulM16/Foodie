@@ -15,6 +15,10 @@ enum NetworkService {
     case getProductInformation(id: Int)
     case searchMenuItems(query: String, number: Int)
     case getMenuItemInformation(id: Int)
+    case getNutritionLabelImage(id: Int)
+    case getAnalyzedRecipeInstructions(id: Int)
+    case getIngredientImage(id: Int)
+    
 }
 
 extension NetworkService: TargetType {
@@ -38,6 +42,13 @@ extension NetworkService: TargetType {
             return "food/menuItems/search"
         case .getMenuItemInformation(id: let id):
             return "food/menuItems/\(id)"
+        case .getNutritionLabelImage(id: let id):
+            return "recipes/\(id)/nutritionLabel.png"
+        case .getAnalyzedRecipeInstructions(id: let id):
+            return "recipes/\(id)/analyzedInstructions"
+        case .getIngredientImage(id: let id):
+            return "recipes/\(id)/ingredientWidget.png"
+            
         }
     }
     
@@ -49,14 +60,19 @@ extension NetworkService: TargetType {
         switch self {
         case .searchRecipes(query: let query, number: let number), .searchGroceryProducts(query: let query, number: let number), .searchMenuItems(query: let query, number: let number):
             return .requestParameters(parameters: ["query": query, "number": number], encoding: URLEncoding.default)
-        case .searchAllFood, .getRecipeInformation, .getProductInformation, .getMenuItemInformation:
+        case .searchAllFood, .getRecipeInformation, .getProductInformation, .getMenuItemInformation, .getNutritionLabelImage, .getAnalyzedRecipeInstructions, .getIngredientImage:
             return .requestPlain
         }
     }
     
     var headers: [String : String]? {
-        let parameters = ["x-api-key": "0340903970a24179bfe2833163521c80", "Content-Type": "application/json"]
-        return parameters
+        switch self {
+        case .searchRecipes, .searchAllFood, .getRecipeInformation, .getProductInformation, .getMenuItemInformation, .getAnalyzedRecipeInstructions, .searchGroceryProducts, .searchMenuItems:
+            return ["x-api-key": apiKey, "Content-Type": "application/json"]
+        case .getNutritionLabelImage, .getIngredientImage:
+            return ["x-api-key": apiKey, "Content-Type": "image/png"]
+        }
+        
     }
     
     

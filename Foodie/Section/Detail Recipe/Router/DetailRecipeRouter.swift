@@ -9,7 +9,7 @@ import UIKit
 
 class DetailRecipeRouter: DetailRecipePresenterToRouterProtocol {
     static func createModule() -> DetailRecipeViewController {
-        let view = DetailRecipeViewController.instantiate()
+        let view = DetailRecipeViewController.instantiate(fromStoryboardName: "DetailRecipe")
         var presenter: DetailRecipeViewToPresenterProtocol & DetailRecipeInteractorToPresenterProtocol = DetailRecipePresenter()
         var interactor: DetailRecipePresenterToInteractorProtocol = DetailRecipeInteractor()
         let router: DetailRecipePresenterToRouterProtocol = DetailRecipeRouter()
