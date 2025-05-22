@@ -32,13 +32,6 @@ This is an iOS application built with Swift using the VIPER architecture and Sto
 
 ---
 
-Screenshots
-
-![Uploading IMG_0799.PNG…]![IMG_0800](https://github.com/user-attachments/assets/e2b88271-2d12-40d7-b1c9-0f07b0cf4c7c)
-()![IMG_0802](https://github.com/user-attachments/assets/c9e46892-9f3c-4a21-a77c-7f1cbc82dd7c)
-![IMG_0801](https://github.com/user-attachments/assets/2407d616-840b-4800-8676-34de74cc746e)
-
-
 https://github.com/user-attachments/assets/064ce897-a381-4ddb-99d2-70625348d2b8
 
 ## 🚀 Getting Started
