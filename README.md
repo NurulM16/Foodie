@@ -1,5 +1,3 @@
-![IMG_0799](https://github.com/user-attachments/assets/fef47c86-8988-483d-b591-2c581ae2a589)# Foodie
-
 # 📱 iOS App - [Foodie]
 
 This is an iOS application built with Swift using the VIPER architecture and Storyboard for UI layout. The project follows a modular approach to improve maintainability, scalability, and testability.
